@@ -7,33 +7,49 @@
     <link rel="stylesheet" href="./static/styles.css">
 </head>
 <body>
-    <h1>BrainMap API Documentation</h1>
+    <header>
+        <h1>BrainMap API Documentation</h1>
+    </header>
 
-    <h2>Overview</h2>
-    <p>BrainMap is an API for processing and analyzing MRI data. It provides endpoints for preprocessing, training models, evaluating performance, and making predictions.</p>
+    <main>
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>BrainMap is an API for processing and analyzing MRI data. It provides endpoints for preprocessing, training models, evaluating performance, and making predictions.</p>
+        </section>
 
-    <h2>Endpoints</h2>
+        <section id="endpoints">
+            <h2>Endpoints</h2>
+            <article>
+                <h3>1. Preprocess</h3>
+                <p><code>POST /preprocess</code></p>
+                <p>Preprocesses raw MRI data and stores the processed data.</p>
+            </article>
+            <article>
+                <h3>2. Train</h3>
+                <p><code>POST /train</code></p>
+                <p>Trains a model on preprocessed data and returns the validation MAE.</p>
+            </article>
+            <article>
+                <h3>3. Evaluate</h3>
+                <p><code>POST /evaluate</code></p>
+                <p>Evaluates the performance of the latest production model on processed data.</p>
+            </article>
+            <article>
+                <h3>4. Predict</h3>
+                <p><code>POST /predict</code></p>
+                <p>Makes a prediction using the latest trained model.</p>
+            </article>
+        </section>
 
-    <h3>1. Preprocess</h3>
-    <p><code>POST /preprocess</code></p>
-    <p>Preprocesses raw MRI data and stores the processed data.</p>
+        <section id="usage">
+            <h2>Usage</h2>
+            <p>For detailed usage instructions and example requests, please refer to our <a href="https://github.com/joelbrice/brainmap">GitHub repository</a>.</p>
+        </section>
+    </main>
 
-    <h3>2. Train</h3>
-    <p><code>POST /train</code></p>
-    <p>Trains a model on preprocessed data and returns the validation MAE.</p>
-
-    <h3>3. Evaluate</h3>
-    <p><code>POST /evaluate</code></p>
-    <p>Evaluates the performance of the latest production model on processed data.</p>
-
-    <h3>4. Predict</h3>
-    <p><code>POST /predict</code></p>
-    <p>Makes a prediction using the latest trained model.</p>
-
-    <h2>Usage</h2>
-    <p>For detailed usage instructions and example requests, please refer to our <a href="https://github.com/joelbrice/brainmap">GitHub repository</a>.</p>
-
-    <h2>Contact</h2>
-    <p>For support or inquiries, please open an issue on our GitHub repository.</p>
+    <footer>
+        <h2>Contact</h2>
+        <p>For support or inquiries, please open an issue on our GitHub repository.</p>
+    </footer>
 </body>
 </html>
