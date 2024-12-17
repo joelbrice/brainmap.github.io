@@ -9,47 +9,54 @@
 <body>
     <header>
         <h1>BrainMap API Documentation</h1>
+        <p>Analyze MRI images with our prediction API</p>
     </header>
 
     <main>
         <section id="overview">
             <h2>Overview</h2>
-            <p>BrainMap is an API for processing and analyzing MRI data. It provides endpoints for preprocessing, training models, evaluating performance, and making predictions.</p>
+            <p>BrainMap is an API designed for analyzing MRI images. It provides a single endpoint for making predictions based on uploaded MRI data.</p>
         </section>
 
-        <section id="endpoints">
-            <h2>Endpoints</h2>
+        <section id="endpoint">
+            <h2>API Endpoint</h2>
             <article>
-                <h3>1. Preprocess</h3>
-                <p><code>POST /preprocess</code></p>
-                <p>Preprocesses raw MRI data and stores the processed data.</p>
-            </article>
-            <article>
-                <h3>2. Train</h3>
-                <p><code>POST /train</code></p>
-                <p>Trains a model on preprocessed data and returns the validation MAE.</p>
-            </article>
-            <article>
-                <h3>3. Evaluate</h3>
-                <p><code>POST /evaluate</code></p>
-                <p>Evaluates the performance of the latest production model on processed data.</p>
-            </article>
-            <article>
-                <h3>4. Predict</h3>
+                <h3>Predict</h3>
                 <p><code>POST /predict</code></p>
-                <p>Makes a prediction using the latest trained model.</p>
+                <p>Uploads an MRI image and returns a prediction using the latest trained model.</p>
+                <h4>Request</h4>
+                <ul>
+                    <li><strong>Method:</strong> POST</li>
+                    <li><strong>Content-Type:</strong> multipart/form-data</li>
+                    <li><strong>Body:</strong> Form data with a file field named 'file' containing the MRI image</li>
+                </ul>
+                <h4>Response</h4>
+                <p>JSON object containing:</p>
+                <ul>
+                    <li><strong>Prediction:</strong> The predicted value</li>
+                    <li><strong>Probability:</strong> The probability of the prediction</li>
+                </ul>
             </article>
         </section>
 
         <section id="usage">
-            <h2>Usage</h2>
-            <p>For detailed usage instructions and example requests, please refer to our <a href="https://github.com/joelbrice/brainmap">GitHub repository</a>.</p>
+            <h2>Usage Example</h2>
+            <pre><code>
+curl -X POST -F "file=@path/to/your/image.jpg" https://api.brainmap.com/predict
+            </code></pre>
+            <p>Replace 'path/to/your/image.jpg' with the actual path to your MRI image file.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need support, please open an issue on our
+               <a href="https://github.com/joelbrice/brainmap/issues" target="_blank">GitHub repository</a>.
+            </p>
         </section>
     </main>
 
     <footer>
-        <h2>Contact</h2>
-        <p>For support or inquiries, please open an issue on our GitHub repository.</p>
+        <p>&copy; 2024 BrainMap. All rights reserved.</p>
     </footer>
 </body>
 </html>
