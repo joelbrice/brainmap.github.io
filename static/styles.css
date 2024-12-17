@@ -1,0 +1,29 @@
+/* styles.css */
+body {
+  background-color: #F8F9FA;
+  color: #000;
+}
+
+.sidebar .sidebar-content {
+  background-color: #FFFFFF;
+}
+
+.custom-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #4CAF50;
+  text-align: center;
+}
+
+.custom-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: gray;
+  font-size: 12px;
+}
+
+.big-font {
+  font-size: 20px !important;
+}
